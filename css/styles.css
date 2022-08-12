@@ -34,8 +34,9 @@ h2 {
 }
 
 .container {
-  max-width: 1024px;
+  max-width: 1054px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .header {
@@ -71,10 +72,13 @@ h2 {
   width: 130px;
 }
 
-.croissant img {
-  width: auto;
-  height: 90vh;
-  object-fit: contain;
+.main-img {
+  width: 50%;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
 }
 
 .recipe ul li,
@@ -83,6 +87,7 @@ h2 {
 }
 
 .instructions {
+  padding-left: 15px;
   margin-bottom: 40px;
 }
 
@@ -122,4 +127,68 @@ h2 {
 
 .contact-link a:hover {
   text-decoration: underline black;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 962px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 738px;
+  }
+
+  h1 {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 546px;
+  }
+
+  .croissant.container {
+    padding-top: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .main-img {
+    display: none;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .contacts.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .container {
+    justify-content: center;
+  }
+
+  .logo {
+    display: none;
+  }
 }
